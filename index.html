@@ -1,0 +1,174 @@
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ermittlungsakte 001</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="container">
+
+        <header class="header">
+            <div class="case-number">POLIZEI – SONDERKOMMISSION</div>
+            <div class="confidential">VERTRAULICH</div>
+            <h1>ERMITTLUNGSAKTE</h1>
+            <p>Fallnummer: 001-2026</p>
+        </header>
+
+        <section class="case-info">
+            <div>
+                <span class="label">STATUS</span>
+                <span class="value">UNGELÖST</span>
+            </div>
+            <div>
+                <span class="label">PRIORITÄT</span>
+                <span class="value">GEHEIM</span>
+            </div>
+            <div>
+                <span class="label">ERMITTLER</span>
+                <span class="value">DU</span>
+            </div>
+        </section>
+
+        <section class="description">
+            <h2>01 – DER AUFTRAG</h2>
+            <p>
+                Ein wertvoller Gegenstand wurde sichergestellt,
+                doch sein genauer Verbleib ist unbekannt.
+                Die bisherigen Ermittlungen führten zu keiner
+                eindeutigen Lösung.
+            </p>
+            <p>
+                Deine Aufgabe ist es, den folgenden Hinweis
+                korrekt zu entschlüsseln. Nur dann kann die
+                Akte geschlossen und der Fall gelöst werden.
+            </p>
+        </section>
+
+        <section class="riddle">
+            <h2>02 – BEWEISSTÜCK A</h2>
+
+            <div class="evidence">
+                <span class="evidence-label">BEWEISSTÜCK A / ORIGINALHINWEIS</span>
+
+                <p id="riddleText">
+                    Hier kommt später dein persönliches Rätsel hin.
+                    Finde das gesuchte Wort, um den Fall zu lösen.
+                </p>
+            </div>
+        </section>
+
+        <section class="solution">
+            <h2>03 – LÖSUNGSEINGABE</h2>
+            <p>Gib das gesuchte Lösungswort ein:</p>
+
+            <div class="input-area">
+                <input
+                    type="text"
+                    id="answer"
+                    placeholder="Lösungswort eingeben..."
+                    autocomplete="off"
+                >
+                <button onclick="checkAnswer()">ÜBERPRÜFEN</button>
+            </div>
+
+            <p id="feedback"></p>
+        </section>
+
+        <section class="hints">
+            <h2>04 – ERMITTLUNGSHILFE</h2>
+
+            <p>
+                Sollte die Ermittlung ins Stocken geraten,
+                werden automatisch täglich weitere Hinweise
+                freigegeben.
+            </p>
+
+            <div id="letterContainer" class="letters"></div>
+
+            <p id="hintStatus" class="hint-status"></p>
+        </section>
+
+        <section id="success" class="success hidden">
+            <div class="success-stamp">FALL GELÖST</div>
+            <h2>ERMITTLUNG ABGESCHLOSSEN</h2>
+
+            <p>
+                Hervorragende Arbeit. Du hast den Fall erfolgreich
+                gelöst. Die gesuchte Belohnung wurde freigegeben.
+            </p>
+
+            <div class="voucher">
+                <span>DEIN THALIA-GUTSCHEINCODE</span>
+                <strong id="voucherCode"></strong>
+            </div>
+
+            <p class="final-note">
+                Akte geschlossen. Ende der Ermittlungen.
+            </p>
+        </section>
+
+        <footer>
+            <p>SONDERKOMMISSION – INTERNE ERMITTLUNGEN</p>
+            <p>UNBEFUGTER ZUGRIFF IST UNTERSAGT</p>
+        </footer>
+
+    </main>
+
+<!-- EINMALIGES TUTORIAL -->
+<div id="tutorialOverlay" class="tutorial-overlay hidden">
+    <div class="tutorial-box">
+
+        <div class="tutorial-top">
+            <span>SONDERKOMMISSION</span>
+            <span class="tutorial-stamp">INFORMATION</span>
+        </div>
+
+        <h2>WILLKOMMEN, ERMITTLER.</h2>
+
+        <p class="tutorial-intro">
+            Bevor du mit deinen Ermittlungen beginnst,
+            hier eine kurze Einweisung.
+        </p>
+
+        <div class="tutorial-step">
+            <span class="step-number">01</span>
+            <div>
+                <strong>RÄTSEL LÖSEN</strong>
+                <p>Lies den Hinweis sorgfältig und gib dein Lösungswort in das Eingabefeld ein.</p>
+            </div>
+        </div>
+
+        <div class="tutorial-step">
+            <span class="step-number">02</span>
+            <div>
+                <strong>HILFEN NUTZEN</strong>
+                <p>Jeden Tag wird automatisch ein weiterer Buchstabe des Lösungswortes enthüllt.</p>
+            </div>
+        </div>
+
+        <div class="tutorial-step">
+            <span class="step-number">03</span>
+            <div>
+                <strong>FALL ABSCHLIESSEN</strong>
+                <p>Bei richtiger Lösung wird dein persönlicher Thalia-Gutschein freigeschaltet.</p>
+            </div>
+        </div>
+
+        <button onclick="closeTutorial()" class="tutorial-button">
+            VERSTANDEN – ERMITTLUNG STARTEN
+        </button>
+
+        <p class="tutorial-footer">
+            SONDERKOMMISSION – INTERNE ANWEISUNG
+        </p>
+
+    </div>
+</div>
+
+    <script src="script.js"></script>
+</body>
+</html>
